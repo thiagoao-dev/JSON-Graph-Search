@@ -26,7 +26,8 @@ def dfs(g, no = '0', path = []):
             if acao not in path:
                 dfs(g,acao,path)
                 break
-    #print(path)
+        print(path)
+        return False
 
 def expandir(g, no):
     nodes = []
