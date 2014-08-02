@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd3fbb98-2d6e-40ed-940e-4d501ad52db5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="dd3fbb98-2d6e-40ed-940e-4d501ad52db5" name="Default" comment="" />
     <ignored path="GrafoBusca.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -351,7 +348,11 @@
       <created>1406949766198</created>
       <updated>1406949766198</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Alteração do código de leitura do arquivo json&#10;">
+      <created>1406951688796</created>
+      <updated>1406951688796</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -396,7 +397,8 @@
     </option>
     <MESSAGE value="Arquivo principal&#10;" />
     <MESSAGE value=" Arquivo para teste&#10; Enunciado do trabalhno&#10; Arquivo teste com leitura" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Arquivo para teste&#10; Enunciado do trabalhno&#10; Arquivo teste com leitura" />
+    <MESSAGE value="Alteração do código de leitura do arquivo json&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração do código de leitura do arquivo json&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
