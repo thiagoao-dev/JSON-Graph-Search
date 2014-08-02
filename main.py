@@ -1,6 +1,7 @@
 __author__ = 'ThiagoAugustus'
 
 import json
+import copy
 
 # Lê o arquivo json
 def readJson():
@@ -13,35 +14,30 @@ def readJson():
 
 # Busca em Largura (Breadth-First Search
 def fbs(g, no):
-
     pass
 
 # Busca em Profundidade (Depth-First Search)
-def dfs(g, no, path = []):
-    if no in g.keys():
-        if no not in path: return False
+def dfs(g, no = '0', path = []):
+    if str(no) in g.keys():
         print("Expandido nó : ", no)
-        path.append(no)
-        if str(g[no][0]) not in path:
-            print("Expadir nó : " + str(g[no][0]))
-            findNextNode(g,g[no][0])
-            #dfs(g,str(g[no][0]),path)
-        elif str(g[no][1]) not in path:
-            print("Expadir nó : " + str(g[no][1]))
-            findNextNode(g,g[no][1])
-            #dfs(g,str(g[no][1]),path)
-    else:
-        print("Saída : ", path)
-        return False
+        path.append(int(no))
+        acoes = expandir(g, no)
+        for acao in acoes:
+            if acao not in path:
+                dfs(g,acao,path)
+                break
+    #print(path)
 
-def findNextNode(g, no):
+def expandir(g, no):
     nodes = []
-    print(g, no)
-    nodes = g[str(no)]
-    for nos, val in g.items():
-        if no == val[0] or no == val[1]:
-            print(nos, " entrou ", val)
-    print(nodes)
+    g2 = copy.deepcopy(g)
+    for n,v in g2.items():
+        for i in v:
+            if int(no) == i:
+                v.remove(int(no))
+                nodes.append(v[0])
+    nodes.sort()
+    return nodes
 
 # Recupera os vértices do json
 arquivo  = readJson()
