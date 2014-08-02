@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd3fbb98-2d6e-40ed-940e-4d501ad52db5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GrafoBusca.iws" />
@@ -33,8 +32,8 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.298995" vertical-offset="340" max-vertical-offset="918">
-              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.78643215" vertical-offset="10" max-vertical-offset="935">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -369,7 +368,11 @@
       <created>1406987978823</created>
       <updated>1406987978823</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="alteração na função busca em profundidade">
+      <created>1406993330275</created>
+      <updated>1406993330275</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -416,7 +419,8 @@
     <MESSAGE value=" Arquivo para teste&#10; Enunciado do trabalhno&#10; Arquivo teste com leitura" />
     <MESSAGE value="Alteração do código de leitura do arquivo json&#10;" />
     <MESSAGE value="Criação das funções busca em largura e busca em profundidade (ainda não implementados)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação das funções busca em largura e busca em profundidade (ainda não implementados)" />
+    <MESSAGE value="alteração na função busca em profundidade" />
+    <option name="LAST_COMMIT_MESSAGE" value="alteração na função busca em profundidade" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -448,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.298995" vertical-offset="340" max-vertical-offset="918">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.78643215" vertical-offset="10" max-vertical-offset="935">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding />
         </state>
       </provider>

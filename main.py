@@ -13,6 +13,7 @@ def readJson():
 
 # Busca em Largura (Breadth-First Search
 def fbs(g, no):
+
     pass
 
 # Busca em Profundidade (Depth-First Search)
