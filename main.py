@@ -13,8 +13,25 @@ def readJson():
         return json_file
 
 # Busca em Largura (Breadth-First Search
-def fbs(g, no):
-    pass
+def bfs(g, no):
+    fila = []
+    path = []
+    # Enquanto o path for menor que o tamanho do grafo
+    while len(path) < (len(g) - 1):
+        # Caso o nó não esteja no visitados
+        if no not in path:
+            print("Expandido o nó: ", no)
+            path = path+[int(no)]
+        # Expandi as ações possíveis
+        acoes = expandir(g,no)
+        for acao in acoes:
+            if acao not in path:
+                print("Do nó: ", no, " expandido o nó: ", acao)
+                path = path+[acao]
+                fila = fila+[acao]
+        fila.sort()
+        no = fila.pop()
+    return path
 
 # Busca em Profundidade (Depth-First Search)
 def dfs(g, no, path = []):
@@ -54,4 +71,6 @@ def expandir(g, no):
 
 # Recupera os vértices do json e inicia o código
 arquivo  = readJson()
-print("Saída: ", dfs(arquivo['vertices'],input("Qual vértice iniciará a busca: ")))
+
+print("Saída: ", bfs(arquivo['vertices'],input("Qual vértice iniciará a busca: ")))
+#print("Saída: ", dfs(arquivo['vertices'],input("Qual vértice iniciará a busca: ")))
