@@ -18,25 +18,38 @@ def fbs(g, no):
 
 # Busca em Profundidade (Depth-First Search)
 def dfs(g, no = '0', path = []):
+    # Verifica se o nó está no grafo
     if str(no) in g.keys():
-        print("Expandido nó : ", no)
-        path.append(int(no))
-        acoes = expandir(g, no)
-        for acao in acoes:
-            if acao not in path:
-                dfs(g,acao,path)
-                break
-        print(path)
-        return False
+        # Verifica se o nó ainda não foi verificado
+        if no not in path:
+            print("Expandido nó : ", no)
+            path.append(int(no))
+            acoes = expandir(g, no)
+            for acao in acoes:
+                if acao not in path:
+                    dfs(g,acao,path)
+                    break
+            return False
+            print(path)
+    return False
 
+# Função que retorna as possíveis ações
 def expandir(g, no):
+    # Cria uma lista de ações
     nodes = []
+    # Cria uma cópia do grafo para manipulação
     g2 = copy.deepcopy(g)
+    # Varre todos os nós do grafo
     for n,v in g2.items():
+        # Verifica se em cada tupla há uma ligação com o nó
         for i in v:
+            # Caso o nó exista na tupla
             if int(no) == i:
+                # Remove o nó atual
                 v.remove(int(no))
+                # Adciona o nó que faz link na lista
                 nodes.append(v[0])
+    # Organiza os nós por ordem númerica
     nodes.sort()
     return nodes
 
