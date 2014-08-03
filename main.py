@@ -18,15 +18,13 @@ def fbs(g, no):
 
 # Busca em Profundidade (Depth-First Search)
 def dfs(g, no, path = []):
-    if len(path) < len(g) and int(no) > 0:
-        if no not in path:
-            path.append(int(no))
-        #else:
-        #   dfs(g, int(no)-1, path)
-
-        #print("Expandido nó : ", no)
+    # Verifica se o valor do nó é válido
+    if len(path) < (len(g)-1) and int(no) > 0:
+        # Add o nó no path
+        if no not in path: path.append(int(no))
+        print("Expandido nó : ", no)
         acoes = expandir(g, no)
-        #print("Possiveis ações", acoes)
+        print("Possíveis ações", acoes)
         for acao in acoes:
             if acao not in path:
                 dfs(g,acao,path)
@@ -54,7 +52,6 @@ def expandir(g, no):
     nodes.sort()
     return nodes
 
-# Recupera os vértices do json
+# Recupera os vértices do json e inicia o código
 arquivo  = readJson()
-vertices = arquivo['vertices']
-print(dfs(vertices,input("Qual vértice iniciará a busca: ")))
+print("Saída: ", dfs(arquivo['vertices'],input("Qual vértice iniciará a busca: ")))
