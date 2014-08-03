@@ -20,16 +20,15 @@ def bfs(g, no):
     while len(path) < (len(g) - 1):
         # Caso o nó não esteja no visitados
         if no not in path:
-            print("Expandido o nó: ", no)
             path = path+[int(no)]
         # Expandi as ações possíveis
         acoes = expandir(g,no)
         for acao in acoes:
             if acao not in path:
-                print("Do nó: ", no, " expandido o nó: ", acao)
                 path = path+[acao]
                 fila = fila+[acao]
         fila.sort()
+        fila.reverse()
         no = fila.pop()
     return path
 
@@ -39,9 +38,9 @@ def dfs(g, no, path = []):
     if len(path) < (len(g)-1) and int(no) > 0:
         # Add o nó no path
         if no not in path: path.append(int(no))
-        print("Expandido nó : ", no)
+        #print("Expandido nó : ", no)
         acoes = expandir(g, no)
-        print("Possíveis ações", acoes)
+        #print("Possíveis ações", acoes)
         for acao in acoes:
             if acao not in path:
                 dfs(g,acao,path)
@@ -72,5 +71,7 @@ def expandir(g, no):
 # Recupera os vértices do json e inicia o código
 arquivo  = readJson()
 
-print("Saída: ", bfs(arquivo['vertices'],input("Qual vértice iniciará a busca: ")))
-#print("Saída: ", dfs(arquivo['vertices'],input("Qual vértice iniciará a busca: ")))
+noEscolhido = input("Qual vértice iniciará a busca: ")
+
+print("Busca em Largura - saída: ", bfs(arquivo['vertices'], noEscolhido))
+print("Busca em Profundidade - saída: ", dfs(arquivo['vertices'], noEscolhido))
