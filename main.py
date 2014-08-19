@@ -1,4 +1,4 @@
-__author__ = 'ThiagoAugustus'
+__author__ = 'Thiago Augustus e Douglas Komar'
 
 import json
 import copy
